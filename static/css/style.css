@@ -1,5 +1,67 @@
+.header {
+  border: solid 10px rgb(246, 8, 131);
+}
+
+.hero {
+  text-align: center;
+}
+.hero .copy {
+  margin-bottom: 2.3em;
+}
+.hero-img {
+  height: 300px;
+  margin: 0 -1.5em;
+  background: url("../static/images/image-mockups.png") center bottom no-repeat, url("../static/images/bg-intro-mobile.svg") center no-repeat;
+  background-size: 345px, cover;
+  margin-bottom: 1.2em;
+}
+
+:root {
+  --font: "Public Sans", sans-serif;
+  font-size: 16px;
+  --darkBlue: hsl(233, 26%, 24%);
+  --limeGreen: hsl(136, 65%, 51%);
+  --brightCyan: hsl(192, 70%, 51%);
+  --grayish-blue: hsl(233, 8%, 62%);
+  --light-grayish-blue: hsl(220, 16%, 96%);
+  --very-light-gray: hsl(0, 0%, 98%);
+  --white: hsl(0, 0%, 100%);
+}
+
 body {
-  border: solid 10px rgb(24, 14, 118);
+  margin: 0;
+  padding: 0;
+  font-family: var(--font);
+  color: var(--grayish-blue);
+}
+
+.copy {
+  line-height: 1.5;
+  font-size: 0.9em;
+}
+
+.wrapper {
+  padding: 0 1.5em;
+}
+
+.title {
+  border: solid 1px red;
+}
+.title-h1 {
+  font-size: 2.2em;
+  color: var(--darkBlue);
+  font-weight: 300;
+  line-height: 1, 1;
+  margin: 0;
+  margin-bottom: 0.5em;
+}
+
+.button {
+  border: none;
+  padding: 0.9em 2.2em;
+  border-radius: 20px;
+  color: var(--white);
+  background-image: linear-gradient(to right, var(--limeGreen), var(--brightCyan));
 }
 
 /*# sourceMappingURL=style.css.map */

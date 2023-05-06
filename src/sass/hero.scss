@@ -1,0 +1,16 @@
+.hero{
+    // border: solid 1px rgb(255, 47, 0);
+    text-align: center;
+    .copy{
+        // border: solid 1px rgb(255, 0, 208);
+        margin-bottom: 2.3em;
+    }
+    &-img{
+        // border: solid 2px orangered;
+        height: 300px;
+        margin: 0 -1.5em;
+        background: url('../static/images/image-mockups.png') center bottom no-repeat, url('../static/images/bg-intro-mobile.svg') center no-repeat;
+        background-size: 345px, cover;
+        margin-bottom: 1.2em;
+    }
+}
