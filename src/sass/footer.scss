@@ -1,0 +1,30 @@
+.footer{
+    border: solid 2px rgb(250, 7, 173);
+    background: var(--darkBlue);
+    padding: 2em 0;
+    text-align: center;
+    svg{
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 2em;
+    }
+    &-link{
+        display: block;
+        text-decoration: none;
+        color: var(--light-grayish-blue);
+        margin-bottom: 2em;
+
+    }
+    &-social{
+        display: grid;
+        grid-template-columns: repeat(5, 25px);
+        grid-column-gap: 1em;
+        justify-content: center;
+        margin: 2.5em 0;
+    }
+    &-copyright{
+        // border: solid 2px orange;
+        margin-top: 2.5em;
+        font-size: 14px;
+    }
+}
