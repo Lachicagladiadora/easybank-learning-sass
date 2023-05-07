@@ -1,19 +1,14 @@
 .latestArticle{
-    // border: solid 1px rgb(248, 17, 117);
     padding-top: 5em 0;
     background: var(--very-light-gray);
     .title-h1{
         text-align: center;
     }
-    // .title-h3{
-    //     text-align: left;
-    // }
     &-grid{
         display: grid;
         grid-row-gap: 2em;
     }
     &-item{
-        // border: solid 1px rgb(12, 139, 31);
         border-radius: .5em;
         overflow: hidden;
         background: var(--white);

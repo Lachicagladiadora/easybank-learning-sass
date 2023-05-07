@@ -1,5 +1,4 @@
 .header {
-  border: solid 1px rgb(246, 8, 131);
   display: flex;
   padding: 1em 1.5em;
   justify-content: space-between;
@@ -28,7 +27,7 @@
 .why {
   text-align: center;
   background: var(--light-grayish-blue);
-  padding-top: 5em;
+  padding: 5em 0;
 }
 .why .copy {
   margin-bottom: 3em;
@@ -70,7 +69,6 @@
 }
 
 .footer {
-  border: solid 2px rgb(250, 7, 173);
   background: var(--darkBlue);
   padding: 2em 0;
   text-align: center;
