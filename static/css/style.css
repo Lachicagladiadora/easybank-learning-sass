@@ -1,9 +1,18 @@
 .header {
-  border: solid 10px rgb(246, 8, 131);
+  border: solid 1px rgb(246, 8, 131);
+  display: flex;
+  padding: 1em 1.5em;
+  justify-content: space-between;
+}
+
+.menu {
+  width: 40px;
+  background: url("../images/icon-hamburger.svg") center no-repeat;
 }
 
 .hero {
   text-align: center;
+  padding-bottom: 5em;
 }
 .hero .copy {
   margin-bottom: 2.3em;
@@ -14,6 +23,53 @@
   background: url("../static/images/image-mockups.png") center bottom no-repeat, url("../static/images/bg-intro-mobile.svg") center no-repeat;
   background-size: 345px, cover;
   margin-bottom: 1.2em;
+}
+
+.why {
+  text-align: center;
+  background: var(--light-grayish-blue);
+  padding-top: 5em;
+}
+.why .copy {
+  margin-bottom: 3em;
+}
+.why-item .copy {
+  margin-bottom: 2em;
+}
+.why-item img {
+  margin-bottom: 1.3em;
+}
+
+.latestArticle {
+  padding-top: 5em 0;
+  background: var(--very-light-gray);
+}
+.latestArticle .title-h1, .latestArticle .title-h3, .latestArticle .title-h2 {
+  text-align: center;
+}
+.latestArticle .title-h3 {
+  text-align: left;
+}
+.latestArticle-grid {
+  display: grid;
+  grid-row-gap: 2em;
+}
+.latestArticle-item {
+  border-radius: 0.5em;
+  overflow: hidden;
+  background: var(--white);
+}
+.latestArticle-item-content {
+  padding: 2em;
+}
+.latestArticle-item small {
+  color: var(--grayish-blue);
+  margin-bottom: 1em;
+  display: block;
+}
+.latestArticle-item img {
+  width: 100%;
+  object-fit: cover;
 }
 
 :root {
@@ -44,16 +100,19 @@ body {
   padding: 0 1.5em;
 }
 
-.title {
-  border: solid 1px red;
-}
-.title-h1 {
+.title-h1, .title-h3, .title-h2 {
   font-size: 2.2em;
   color: var(--darkBlue);
   font-weight: 300;
   line-height: 1, 1;
   margin: 0;
   margin-bottom: 0.5em;
+}
+.title-h2 {
+  font-size: 1.5em;
+}
+.title-h3 {
+  font-size: 1em;
 }
 
 .button {

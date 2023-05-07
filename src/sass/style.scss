@@ -1,5 +1,8 @@
 @import "./header.scss";
+@import "./menu.scss";
 @import "./hero.scss";
+@import "./why.scss";
+@import "./latestArticle.scss";
 
 :root{
 // FONT
@@ -37,7 +40,7 @@ body{
 }
 
 .title{
-    border: solid 1px red;
+    // border: solid 1px red;
     &-h1{
         // border: solid 3px rgb(40, 188, 121);
         font-size: 2.2em;
@@ -46,6 +49,17 @@ body{
         line-height: 1,1;
         margin: 0;
         margin-bottom: .5em;
+    }
+    &-h2{
+        @extend .title-h1;
+        // border: solid 2px rgb(26, 106, 10);
+        font-size: 1.5em;
+        // color: burlywood;
+    }
+    &-h3{
+        @extend .title-h1;
+        // border: solid 2px rgb(26, 106, 10);
+        font-size: 1em;
     }
 }
 
