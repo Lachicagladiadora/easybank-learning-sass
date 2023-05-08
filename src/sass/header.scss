@@ -2,7 +2,10 @@
     display: flex;
     padding: 1em 0;
     justify-content: space-between;
-    position: relative;
+    position: fixed;
+    z-index: 3;
+    width: 100%;
+    background: var(--white);
     &-logo{
         // border: solid 3px violet;
         align-self: center;

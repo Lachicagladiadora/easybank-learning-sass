@@ -2,8 +2,12 @@
     text-align: center;
     padding-bottom: 5em;
     background: var(--light-grayish-blue);
+    // overflow-x: hidden;
     .copy{
         margin-bottom: 2.3em;
+    }
+    &-imagePng{
+        display: none;
     }
     &-img{
         height: 300px;
@@ -14,57 +18,68 @@
     }
     @media screen and (min-width: 768px) {
         text-align: left;
-        background:  url('../static/images/bg-intro-desktop.svg') left 650px top -290px no-repeat;
+        background:  url('../static/images/bg-intro-desktop.svg') left 379px top -55px no-repeat;
         background-size: cover; 
-        // margin-bottom: 1.2em;
         min-height: 550px;
         box-sizing: border-box;
         &-content{
-            // border: solid 1px rgb(255, 0, 51);
+            position: relative;
             display: grid;
             align-items: center;
             min-height: 550px;
             grid-template-areas: "description image";
-            grid-template-columns: 480px 1fr;
-            position: relative;
+            grid-template-columns: 370px 1fr;
+            
         } 
         &-description{
-            border: solid 1px rgb(76, 11, 145);
+            // border: solid 1px rgb(76, 11, 145);
+        }
+        &-imagePng{
+            display: none;
         }
         &-img{
             grid-area: image;
             min-height: inherit;
             position: absolute;
             top: 0;
-            // border: solid 1px orangered;
             width: 500px;
             right: 0px;
             left: 0px;
             height: 768px;
-            background: url('../static/images/image-mockups.png') left bottom no-repeat;
+            // background: url('../static/images/image-mockups.png') left bottom no-repeat;
             background-size: cover;
             
         }
     }
 
     @media screen and (min-width: 1024px) {
-        // background:  url('../static/images/bg-intro-desktop.svg') left 650px top -290px no-repeat;
+        
+        background-size: cover; 
+        // height: 700px;
+
+        .hero-img{
+            display: none;
+        }
 
         &-content{
-            // position: static;
-            border: solid 5px brown;
+            // border: solid 5px brown;
         }
-        &-img{
-            border: solid 5px rgb(103, 7, 31);
-            // height: 768px;
-            background: url('../static/images/image-mockups.png') left bottom no-repeat;
-            background-size: 100%;
-            // width: 730px;
-            left: 150px;
-            right: 0;
-            // top: 3.3em;
-            
+        &-imagePng{
+            display: block;
+            // position: absolute;
+            // top: -20px;
+            // // left: 39%;
+            // right: -185px;
+            // z-index: 1;
+            // margin: 0%;
         }
+        
+        // &-img{
+        //     background: none;
+        //     left: 150px;
+        //     right: 0;
+        //     top: 0;
+        // }
     }
     
 }

@@ -2,7 +2,10 @@
   display: flex;
   padding: 1em 0;
   justify-content: space-between;
-  position: relative;
+  position: fixed;
+  z-index: 3;
+  width: 100%;
+  background: var(--white);
 }
 .header-logo {
   align-self: center;
@@ -96,6 +99,9 @@
 .hero .copy {
   margin-bottom: 2.3em;
 }
+.hero-imagePng {
+  display: none;
+}
 .hero-img {
   height: 300px;
   margin: 0 -1.5em;
@@ -106,21 +112,21 @@
 @media screen and (min-width: 768px) {
   .hero {
     text-align: left;
-    background: url("../static/images/bg-intro-desktop.svg") left 650px top -290px no-repeat;
+    background: url("../static/images/bg-intro-desktop.svg") left 379px top -55px no-repeat;
     background-size: cover;
     min-height: 550px;
     box-sizing: border-box;
   }
   .hero-content {
+    position: relative;
     display: grid;
     align-items: center;
     min-height: 550px;
     grid-template-areas: "description image";
-    grid-template-columns: 480px 1fr;
-    position: relative;
+    grid-template-columns: 370px 1fr;
   }
-  .hero-description {
-    border: solid 1px rgb(76, 11, 145);
+  .hero-imagePng {
+    display: none;
   }
   .hero-img {
     grid-area: image;
@@ -131,20 +137,18 @@
     right: 0px;
     left: 0px;
     height: 768px;
-    background: url("../static/images/image-mockups.png") left bottom no-repeat;
     background-size: cover;
   }
 }
 @media screen and (min-width: 1024px) {
-  .hero-content {
-    border: solid 5px brown;
+  .hero {
+    background-size: cover;
   }
-  .hero-img {
-    border: solid 5px rgb(103, 7, 31);
-    background: url("../static/images/image-mockups.png") left bottom no-repeat;
-    background-size: 100%;
-    left: 150px;
-    right: 0;
+  .hero .hero-img {
+    display: none;
+  }
+  .hero-imagePng {
+    display: block;
   }
 }
 
@@ -306,6 +310,14 @@ body {
   padding: 0;
   font-family: var(--font);
   color: var(--grayish-blue);
+  position: relative;
+  overflow-x: hidden;
+}
+
+.hero-imagePng {
+  position: absolute;
+  right: -104px;
+  top: -1em;
 }
 
 .copy {
