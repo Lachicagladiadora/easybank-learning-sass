@@ -1,9 +1,13 @@
 .latestArticle{
-    padding-top: 5em 0;
+    padding: 5em 0;
     background: var(--very-light-gray);
     .title-h1{
         text-align: center;
         margin-bottom: 1em;
+    }
+    .title-h3{
+        padding-right: 2em;
+        font-size: 16px;
     }
     &-grid{
         display: grid;

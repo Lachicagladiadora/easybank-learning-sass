@@ -11,7 +11,7 @@
         display: block;
         text-decoration: none;
         color: var(--light-grayish-blue);
-        margin-bottom: 2em;
+        margin-bottom: 1em;
 
     }
     &-social{
@@ -20,6 +20,9 @@
         grid-column-gap: 1em;
         justify-content: center;
         margin: 2.5em 0;
+    }
+    &-button{
+        margin-top: 2em;
     }
     &-copyright{
         margin-top: 2.5em;
