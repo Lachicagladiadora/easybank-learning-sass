@@ -3,6 +3,7 @@
     background: var(--very-light-gray);
     .title-h1{
         text-align: center;
+        margin-bottom: 1em;
     }
     &-grid{
         display: grid;
@@ -23,6 +24,33 @@
         img{
             width: 100%;
             object-fit: cover;
+        }
+    }
+    @media screen and (min-width: 768px) {
+        // border: solid 2px rgb(222, 47, 160);
+        text-align: left;
+        .title-h1{
+            text-align: left;
+        }
+        &-item{
+            &-content{
+                padding: 2em;
+            }
+        }
+        &-grid{
+            display: grid;
+            grid-column-gap: 30px;
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+    @media screen and (min-width: 1024px) {
+        &-item{
+            &-content{
+                padding: 1em;
+            }
+        }
+        &-grid{
+            grid-template-columns: repeat(4, 1fr);
         }
     }
 }
