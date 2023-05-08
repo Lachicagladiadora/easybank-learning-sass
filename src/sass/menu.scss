@@ -3,6 +3,9 @@
     display: none;
     list-style: none;
     // justify-content: space-between;
+    // position: relative;
+    padding: 0;
+    margin: 0;
     
     &-button{
         width: 40px;
@@ -13,6 +16,50 @@
         text-decoration: none;
         color: var(--grayish-blue);
         padding: 0 .8em;
+    }
+    &-item{
+        display: flex;
+        align-items: center;
+    }
+    &-checkbox{
+        display: none;
+        &:checked{
+            &~.menu-button{
+                // border: solid 2px crimson;
+                background-image: url(../../static/images/icon-close.svg);
+            }
+            &~.menu{
+                display: block;
+                position: absolute;
+                top: 100%;
+                padding: 1em;
+                left: 0;
+                right: 0;
+                height: 100vh;
+                background: linear-gradient(var(--darkBlue),transparent 80%);
+                .menu-item{
+                    // border: solid 3px fuchsia;
+                    display: block;
+                    &:first-child a{
+                        // border: solid 2px red;
+                        padding-top: 2em;
+                        border-radius: .4em .4em 0 0;
+                    }
+                    &:last-child a{
+                        padding-bottom: 2em;
+                        border-radius: 0 0 .4em .4em;
+                    }
+                }
+                a{
+                    background: var(--white);
+                    padding: .8em 1em;
+                    color: var(--darkBlue);
+                    font-size: 1.1em;
+                    display: block;
+                    text-align: center;
+                }
+            }
+        }
     }
     @media screen and (min-width: 1024px) {
         display: flex;

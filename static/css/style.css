@@ -2,6 +2,7 @@
   display: flex;
   padding: 1em 0;
   justify-content: space-between;
+  position: relative;
 }
 .header-logo {
   align-self: center;
@@ -26,6 +27,8 @@
 .menu {
   display: none;
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 .menu-button {
   width: 40px;
@@ -36,6 +39,45 @@
   text-decoration: none;
   color: var(--grayish-blue);
   padding: 0 0.8em;
+}
+.menu-item {
+  display: flex;
+  align-items: center;
+}
+.menu-checkbox {
+  display: none;
+}
+.menu-checkbox:checked ~ .menu-button {
+  background-image: url(../../static/images/icon-close.svg);
+}
+.menu-checkbox:checked ~ .menu {
+  display: block;
+  position: absolute;
+  top: 100%;
+  padding: 1em;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  background: linear-gradient(var(--darkBlue), transparent 80%);
+}
+.menu-checkbox:checked ~ .menu .menu-item {
+  display: block;
+}
+.menu-checkbox:checked ~ .menu .menu-item:first-child a {
+  padding-top: 2em;
+  border-radius: 0.4em 0.4em 0 0;
+}
+.menu-checkbox:checked ~ .menu .menu-item:last-child a {
+  padding-bottom: 2em;
+  border-radius: 0 0 0.4em 0.4em;
+}
+.menu-checkbox:checked ~ .menu a {
+  background: var(--white);
+  padding: 0.8em 1em;
+  color: var(--darkBlue);
+  font-size: 1.1em;
+  display: block;
+  text-align: center;
 }
 @media screen and (min-width: 1024px) {
   .menu {
@@ -273,9 +315,10 @@ body {
 
 .wrapper {
   padding: 0 1.5em;
-  max-width: 1115px;
+  max-width: calc(1115px + 1.5em);
   margin: auto;
   width: 100%;
+  box-sizing: border-box;
 }
 
 .title-h1 {
