@@ -40,6 +40,7 @@
             position: static;
             padding-top: 10em;
             padding-bottom: 16em;
+            // background: none;
             // height: 900px;
             // border: solid 1px rgb(76, 11, 145);
         }
@@ -69,6 +70,9 @@
 
         .hero-img{
             display: none;
+        }
+        &-description{
+            background: none;
         }
 
         &-content{
